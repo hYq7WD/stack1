@@ -7,7 +7,7 @@ Install-WUUpdates -Updates $u
 
 Get-WindowsFeature -Name *RSAT* | Install-WindowsFeature
 
-# SSH
+# Install SSH
 Get-WindowsCapability -Online -Name 'OpenSSH.Server*' | Add-WindowsCapability -Online
 Set-Service -Name sshd -StartupType 'Automatic'
 Start-Service sshd
